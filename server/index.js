@@ -9,6 +9,10 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'working!!!' });
+});
+
 const start = async () => {
   try {
     await sequelize.authenticate();
