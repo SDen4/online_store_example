@@ -50,7 +50,7 @@ class UserController {
   }
 
   async check(req, res, next) {
-    // при проверке перезаписывается токет
+    // при проверке перезаписывается токен
     const token = jwt.generateJwt(req.user.id, req.user.email, req.user.role);
     return res.json({ token });
   }
