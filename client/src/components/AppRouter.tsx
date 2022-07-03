@@ -9,8 +9,6 @@ const AppRouter: React.FC = () => {
   // @ts-ignore
   const { user } = useContext(Context);
 
-  console.log(user);
-
   return (
     <Routes>
       {user.isAuth &&
