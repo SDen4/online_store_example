@@ -15,7 +15,7 @@ const NavBar: React.FC = observer(() => {
 
   return (
     <Navbar bg="dark" variant="dark">
-      <Container className={styles.container}>
+      <Container>
         <NavLink to={SHOP_ROUTE} className={styles.navlink}>
           Online Store
         </NavLink>

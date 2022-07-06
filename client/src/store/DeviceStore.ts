@@ -10,6 +10,7 @@ export default class DeviceStore {
     rating: number;
     img: string;
   }[];
+  private _selectedType: any;
 
   constructor() {
     this._types = [
@@ -52,6 +53,7 @@ export default class DeviceStore {
         img: '1656253966208.jpg',
       },
     ];
+    this._selectedType = {};
     makeAutoObservable(this);
   }
 
@@ -73,6 +75,9 @@ export default class DeviceStore {
   ) {
     this._devices = devices;
   }
+  setSelectedType(type: any) {
+    this._selectedType = type;
+  }
 
   // getters (computed functions)
   get types() {
@@ -83,5 +88,8 @@ export default class DeviceStore {
   }
   get devices() {
     return this._devices;
+  }
+  get selectedType() {
+    return this._selectedType;
   }
 }
