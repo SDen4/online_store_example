@@ -15,7 +15,7 @@ const DeviceList: React.FC = observer(() => {
   return (
     <Row className={styles.component}>
       {device.devices.map((el: any) => (
-        <DeviceItem device={el} />
+        <DeviceItem device={el} key={el.id} />
       ))}
     </Row>
   );
