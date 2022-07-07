@@ -1,0 +1,26 @@
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  width: 285px;
+  height: 285px;
+  font-size: 64px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  height: 300px;
+  font-size: 32px;
+  border: 5px solid lightgray;
+}
