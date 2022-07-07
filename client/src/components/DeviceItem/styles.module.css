@@ -1,0 +1,24 @@
+.card {
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating > div {
+  margin-right: 5px;
+}
+
+h6 {
+  margin: 0;
+}
