@@ -1,0 +1,19 @@
+.component {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card {
+  padding: 10px;
+  cursor: default;
+  width: unset;
+}
+
+.selectedCard {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.selectedCard:hover {
+  background-color: rgba(0, 0, 255, 0.05);
+}
