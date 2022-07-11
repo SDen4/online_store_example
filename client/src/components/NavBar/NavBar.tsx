@@ -14,6 +14,11 @@ const NavBar: React.FC = observer(() => {
   const { user } = useContext(Context);
   const navigation = useNavigate();
 
+  const logOut = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+  };
+
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -30,10 +35,7 @@ const NavBar: React.FC = observer(() => {
               >
                 Admin
               </Button>
-              <Button
-                variant={'outline-light'}
-                onClick={() => navigation(LOGIN_ROUTE)}
-              >
+              <Button variant={'outline-light'} onClick={logOut}>
                 Sign Out
               </Button>
             </Nav>
@@ -41,7 +43,7 @@ const NavBar: React.FC = observer(() => {
             <Nav className="ml-auto">
               <Button
                 variant={'outline-light'}
-                onClick={() => user.setIsAuth(true)}
+                onClick={() => navigation(LOGIN_ROUTE)}
               >
                 Authorization
               </Button>
