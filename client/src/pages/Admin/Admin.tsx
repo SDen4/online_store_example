@@ -4,7 +4,7 @@ import CreateBrand from '../../components/modals/CreateBrand';
 import CreateDevice from '../../components/modals/CreateDevice';
 import CreateType from '../../components/modals/CreateType';
 
-const Admin = () => {
+const Admin: React.FC = () => {
   const [brandVisible, setBrandVisible] = useState<boolean>(false);
   const [typeVisible, setTypeVisible] = useState<boolean>(false);
   const [deviceVisible, setDeviceVisible] = useState<boolean>(false);
