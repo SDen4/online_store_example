@@ -7,6 +7,7 @@ export const registration = async (email: string, password: string) => {
     password,
     role: 'ADMIN',
   });
+  localStorage.setItem('token', data.token);
   return jwtDecode(data.token);
 };
 
@@ -15,6 +16,7 @@ export const login = async (email: string, password: string) => {
     email,
     password,
   });
+  localStorage.setItem('token', data.token);
   return jwtDecode(data.token);
 };
 
