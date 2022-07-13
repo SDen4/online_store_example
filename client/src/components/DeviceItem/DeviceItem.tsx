@@ -18,7 +18,11 @@ const DeviceItem: React.FC<DeviceItemType> = ({ device }) => {
       onClick={() => navigation(`${DEVICE_ROUTE}/${device.id}`)}
     >
       <Card className={styles.card} border={'light'}>
-        <Image width={150} height={150} src={device.img} />
+        <Image
+          width={150}
+          height={150}
+          src={`${process.env.REACT_APP_API_URL}/${device.img}`}
+        />
         <div className={styles.cardContent}>
           <h6>Samsumg</h6>
           <div className={styles.rating}>

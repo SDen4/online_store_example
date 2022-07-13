@@ -24,36 +24,7 @@ export default class DeviceStore {
       { id: 1, name: 'Apple' },
       { id: 2, name: 'Samsung' },
     ];
-    this._devices = [
-      {
-        id: 1,
-        name: '12 pro',
-        price: 120000,
-        rating: 0,
-        img: '1656253022090.jpg',
-      },
-      {
-        id: 2,
-        name: '13 pro',
-        price: 130000,
-        rating: 0,
-        img: '1656253906322.jpg',
-      },
-      {
-        id: 3,
-        name: 'galaxy 1',
-        price: 99999,
-        rating: 0,
-        img: '1656253936008.jpg',
-      },
-      {
-        id: 4,
-        name: 'air pods',
-        price: 19999,
-        rating: 0,
-        img: '1656253966208.jpg',
-      },
-    ];
+    this._devices = [];
     this._selectedType = {};
     this._selectedBrand = {};
     makeAutoObservable(this);

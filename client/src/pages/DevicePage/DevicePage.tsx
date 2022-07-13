@@ -1,21 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
-
-import { Context } from '../../index';
+import { useParams } from 'react-router-dom';
 
 import bigStart from '../../assets/bigStar.png';
+import { fetchOneDevice } from '../../http/deviceAPI';
 
 import styles from './styles.module.css';
 
 const DevicePage: React.FC = () => {
-  // @ts-ignore
-  const { device } = useContext(Context);
+  const { id } = useParams();
+  const [device, setDevice] = useState<any>({ info: [] });
+
+  useEffect(() => {
+    fetchOneDevice(id).then((data) => setDevice(data));
+  }, [id]);
 
   return (
     <Container>
       <Row>
         <Col md={4}>
-          <Image width={300} height={300} src={device.img} />
+          <Image
+            width={300}
+            height={300}
+            src={`${process.env.REACT_APP_API_URL}/${device.img}`}
+          />
         </Col>
         <Col md={4}>
           <Row className={styles.row}>
