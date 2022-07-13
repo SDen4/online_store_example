@@ -14,7 +14,7 @@ const Shop: React.FC = () => {
 
   useEffect(() => {
     fetchDevices().then((data) => device.setDevices(data.rows));
-  }, []);
+  }, [device]);
 
   return (
     <Container>
