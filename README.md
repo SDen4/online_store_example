@@ -12,3 +12,12 @@
 - sequelize
 - pg
 - bcrypt
+
+## Client:
+
+- typescript
+- react
+- react-bootstrap
+- mobx
+- axios
+- jwt-decode
